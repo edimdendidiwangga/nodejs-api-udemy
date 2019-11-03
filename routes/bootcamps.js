@@ -22,4 +22,6 @@ router
   .put(updateBootcamp)
   .delete(deleteBootcamp);
 
+  router.route('/radius/:zipcode/:distance').get(getBootcampsInRadius)
+
 module.exports = router;
