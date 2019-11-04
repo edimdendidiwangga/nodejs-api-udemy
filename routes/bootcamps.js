@@ -18,6 +18,10 @@ const router = express.Router();
 router.use('/:bootcampId/courses', courseRouter);
 
 router
+  .route('/:id/photo')
+  .put(bootcampPhotoUpload);
+
+router
   .route('/')
   .get(getBootcamps)
   .post(createBootcamp);
