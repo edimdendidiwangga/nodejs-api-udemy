@@ -30,13 +30,13 @@ router
 router
   .route('/')
   .get(advancedResults(Bootcamp, 'courses'), getBootcamps)
-  .post(protect,  authorize('publisher', 'admin'), createBootcamp);
+  .post(protect, authorize('publisher', 'admin'), createBootcamp);
 
 router
   .route('/:id')
   .get(getBootcamp)
-  .put(protect,  authorize('publisher', 'admin'), updateBootcamp)
-  .delete(protect,  authorize('publisher', 'admin'), deleteBootcamp);
+  .put(protect, authorize('publisher', 'admin'), updateBootcamp)
+  .delete(protect, authorize('publisher', 'admin'), deleteBootcamp);
 
 router.route('/radius/:zipcode/:distance').get(getBootcampsInRadius)
 
